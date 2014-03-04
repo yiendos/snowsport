@@ -33,8 +33,8 @@ class DatabaseTableArticles extends Library\DatabaseTableAbstract
                 'com:tags.database.behavior.taggable'
             ),
             'filters' => array(
-                'introtext'   => array('html', 'tidy'),
-                'fulltext'    => array('html', 'tidy'),
+                'introtext'   => array('tidy'),
+                'fulltext'    => array('tidy'),
 		    )
         ));
 
