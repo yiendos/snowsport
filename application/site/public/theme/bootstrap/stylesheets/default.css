@@ -6146,6 +6146,18 @@ body.login {
 .nav-list a:hover {
   color: black; }
 
+/**signature quote area**/
+.sidebar .quote {
+  background-color: #efefef;
+  padding: 15px; }
+
+.sidebar .person {
+  margin-top: 10px;
+  font-weight: bold; }
+
+.sidebar [class^="icon-"] {
+  color: #228AC6; }
+
 /**content header area**/
 .header-banner {
   background: url(../images/banner.gif) no-repeat;

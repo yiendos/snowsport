@@ -22,9 +22,6 @@
             <div class="hidden-phone">
                 <a class="brand" href="/"><?= escape(object('application')->getCfg('strap_line' )) ?></a>
             </div>
-            <div>
-                <ktml:modules position="user3">
-            </div>
             <div class="hidden-phone">
                 <ktml:modules position="user4">
             </div>
@@ -46,14 +43,15 @@
                 <ktml:modules position="left" chrome="wrapped">
             </div>
         </aside>
-        <div class="span9 header-banner">
-
-        </div>
+        <div class="span9 header-banner"></div>
     </div>
     <div class="row-fluid">
-        <div class="span3 hidden-phone"></div>
+        <aside class="sidebar">
+            <div class="span3 hidden-phone">
+                <ktml:modules position="user3">
+            </div>
+        </aside>
         <div class="span9">
-            <ktml:modules position="breadcrumb">
                 <?= import('page_message.html') ?>
                 <section>
                     <ktml:content>
@@ -89,5 +87,6 @@
 <? endif; ?>
 <script src="/theme/bootstrap/js/jquery.js"></script>
 <script src="/theme/bootstrap/js/bootstrap.js"></script>
+<style src="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" />
 </body>
 </html>
