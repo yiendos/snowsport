@@ -16,17 +16,31 @@
 <header class="container">
     <div class="navbar">
         <nav class="navbar-inner">
-            <a class="brand" href="/"><?= escape(object('application')->getCfg('strap_line' )) ?></a>
+            <div class="hidden-desktop">
+                <a class="brand" href="/"><?= escape(object('application')->getCfg('sitename')) ?></a>
+            </div>
+            <div class="hidden-phone">
+                <a class="brand" href="/"><?= escape(object('application')->getCfg('strap_line' )) ?></a>
+            </div>
             <div>
                 <ktml:modules position="user3">
             </div>
-            <ktml:modules position="user4">
+            <div class="hidden-phone">
+                <ktml:modules position="user4">
+            </div>
+            <div class="hidden-desktop hidden-tablet">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-th-list"></span></a>
+                <div class="nav-collapse collapse">
+                    <ktml:modules position="left" chrome="wrapped">
+                </div>
+            </div>
         </nav>
     </div>
 </header>
 
 <div class="container">
-    <div class="row">
+    <div class="row-fluid hidden-phone">
         <aside class="sidebar span3">
             <div class="well" style="padding: 8px 0;">
                 <ktml:modules position="left" chrome="wrapped">
@@ -35,6 +49,9 @@
         <div class="span9 header-banner">
 
         </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span3 hidden-phone"></div>
         <div class="span9">
             <ktml:modules position="breadcrumb">
                 <?= import('page_message.html') ?>
@@ -46,7 +63,7 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="footer">
+        <div class="footer hidden-phone">
             <div class="span4 snow-logo"></div>
             <div class="span3 nav1">
                 <ktml:modules position="left">
@@ -70,6 +87,7 @@
 <? if(object('application')->getCfg('debug')) : ?>
     <?= object('com:debug.controller.debug')->render(); ?>
 <? endif; ?>
-
+<script src="/theme/bootstrap/js/jquery.js"></script>
+<script src="/theme/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>

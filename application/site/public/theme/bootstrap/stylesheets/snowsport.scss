@@ -1,9 +1,20 @@
+@media all and (max-width: 500px) { /* screen size until 500px */
+  body {
+    font-size: 0.8em; /* 0.8x default size */
+  }
+.navbar .brand { font-size: 16px;}
+.page-header, article header { margin: 0px;}
+}
 /*header amends */
 .navbar-inner{
   background-color: #1889C8;
   background-image: -moz-linear-gradient(top, #38BFFF, #1788C7);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#38BFFF), to(#1788C7));
-  border: 1px solid #125F7E;
+  border: 1px solid #38BFFF;
+  webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  min-height: 40px;
 }
 
 .navbar .brand{
@@ -12,18 +23,31 @@
 }
 
 #searchword{
-  border: 1px solid #125F7E;
+  border: 1px solid #38BFFF;
   color: #125F7E;
 }
 
 .form-search .input-append .btn{
   background-image: -webkit-linear-gradient(top, #38BFFF, #1788C7);
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: #38BFFF #38BFFF #38BFFF;
   border-color: rgba(18,95,126, 0.1) rgba(18,95,126, 0.1) rgba(18,95,126, 0.1);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-  border: 1px solid #125F7E;
+  border: 1px solid #38BFFF;
 }
 
+.btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
+  color: #333333;
+  background-color: #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.btn:hover, .btn:focus{
+  background-position: 0 0;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
 /*navigation menu*/
 
 .well{
@@ -34,25 +58,33 @@
   border: 1px solid #49A6D5;
 }
 
-.nav > li > a, li.nav-header{
-  color: white;
-  text-shadow: none;
-}
-
 .nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus{
   background-color: #f5f5f5;
   color: #173B61;
 }
+
+.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a,
+.nav-collapse .nav .nav-header, .navbar .nav > li > a, .nav > li > a, li.nav-header {
+  color: white;
+  text-shadow: none;
+}
+
+.nav-list a:hover{
+  color:black;
+}
 /**content header area**/
 .header-banner{
   background: url(../images/banner.gif) no-repeat;
-  width: 870px;
+  max-width: 100%;
   height: 198px;
 }
 
 section{
   padding-top: 5px;
 }
+
+.flex-video { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+.flex-video iframe, .flex-video object, .flex-video embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 /**footer area**/
 .footer{
