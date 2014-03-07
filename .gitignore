@@ -3,4 +3,5 @@ vendor/
 .vagrant/
 Vagrantfile
 .idea
-/sites/default/config/config.php
+sites/default/config/config.php
+
