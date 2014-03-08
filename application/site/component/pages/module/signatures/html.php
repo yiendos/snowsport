@@ -32,6 +32,35 @@ class PagesModuleSignaturesHtml extends PagesModuleDefaultHtml
 
         $this->show_title = true;
 
+        $total = $this->getSignatureTotal();
+
+        $this->total_signatures = $total;
+
         return parent::render();
+    }
+
+    public function getSignatureTotal()
+    {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $this->getObject('application')->getCfg('petition_link'));
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $page = curl_exec($ch);
+
+        if(curl_errno($ch))
+        {
+            $this->message = 'error importing data ' . (string)curl_error($ch);
+
+            return 'curl failed';
+        }
+
+        preg_match_all('/id="sigs-numbers" rel="([^>].+)">/', $page, $matches);
+
+        foreach($matches[1] as $key => $match)
+        {
+            return $match;
+        }
+
+        return false;
     }
 }
