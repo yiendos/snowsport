@@ -7,8 +7,9 @@
  * @link		git://git.assembla.com/nooku-framework.git for the canonical source repository
  */
 ?>
-
-<?= helper('facebook.load') ?>
+<? if($article->get('params') == 'facebook=true'): ?>
+    <?= helper('facebook.load') ?>
+<? endif; ?>
 
 <title content="replace"><?= $article->title ?></title>
 
@@ -44,5 +45,7 @@
     <?= import('com:tags.view.tags.default.html') ?>
     <?= import('com:attachments.view.attachments.default.html', array('attachments' => $attachments, 'exclude' => array($article->attachments_attachment_id))) ?>
 
-    <?= helper('facebook.comments', array('url' => $this->getView()->getUrl()->toString())) ;?>
+    <? if($article->get('params') == 'facebook=true'): ?>
+        <?= helper('facebook.comments', array('url' => $this->getView()->getUrl()->toString())) ;?>
+    <? endif; ?>
 </article>
