@@ -1,10 +1,27 @@
-@media all and (max-width: 500px) { /* screen size until 500px */
+@media all and (min-width: 980px){
+  .header-banner{
+    background: url(../images/banner.gif) no-repeat;
+    max-width: 100%;
+    height: 198px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 979px) {
+  .header-banner{
+    background: url(../images/banner-small.gif) no-repeat;
+    max-width: 100%;
+    height: 198px;
+  }
+}
+
+@media all and (max-width: 500px) {
   body {
     font-size: 0.8em; /* 0.8x default size */
   }
 .navbar .brand { font-size: 16px;}
 .page-header, article header { margin: 0px;}
 }
+
 /*header amends */
 .navbar-inner{
   background-color: #1889C8;
@@ -90,11 +107,7 @@
 }
 
 /**content header area**/
-.header-banner{
-  background: url(../images/banner.gif) no-repeat;
-  max-width: 100%;
-  height: 198px;
-}
+
 
 section{
   padding-top: 5px;

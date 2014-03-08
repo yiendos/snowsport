@@ -6077,8 +6077,17 @@ body.login {
 .pagination {
   text-align: center; }
 
+@media all and (min-width: 980px) {
+  .header-banner {
+    background: url(../images/banner.gif) no-repeat;
+    max-width: 100%;
+    height: 198px; } }
+@media (min-width: 500px) and (max-width: 979px) {
+  .header-banner {
+    background: url(../images/banner-small.gif) no-repeat;
+    max-width: 100%;
+    height: 198px; } }
 @media all and (max-width: 500px) {
-  /* screen size until 500px */
   body {
     font-size: 0.8em;
     /* 0.8x default size */ }
@@ -6159,11 +6168,6 @@ body.login {
   color: #228AC6; }
 
 /**content header area**/
-.header-banner {
-  background: url(../images/banner.gif) no-repeat;
-  max-width: 100%;
-  height: 198px; }
-
 section {
   padding-top: 5px; }
 

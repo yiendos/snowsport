@@ -16,7 +16,7 @@
 <header class="container">
     <div class="navbar">
         <nav class="navbar-inner">
-            <div class="hidden-desktop">
+            <div class="hidden-desktop hidden-tablet">
                 <a class="brand" href="/"><?= escape(object('application')->getCfg('sitename')) ?></a>
             </div>
             <div class="hidden-phone">
