@@ -52,7 +52,8 @@
             <? endif ?>
             <fieldset>
                 <legend><?= translate('params') ?></legend>
-                <textarea name="params" id="params" rows="5" cols="5"><?= $article->params ?></textarea>
+                <? $params = $article->isNew()? 'facebook=true' : $article->params ?>
+                <textarea name="params" id="params" rows="5" cols="5"><?= $params ?></textarea>
             </fieldset>
         </div>
     </div>
