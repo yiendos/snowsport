@@ -6194,9 +6194,11 @@ section {
 
 /**footer area**/
 .footer {
-  background-color: #173B61;
-  min-height: 250px;
-  margin-left: 30px; }
+  border: 1px solid #173B61;
+  min-height: 100px; }
+
+.footer > div {
+  margin-top: 20px; }
 
 div.snow-logo {
   background-image: url(../images/footer-logo.gif);
@@ -6204,20 +6206,9 @@ div.snow-logo {
   height: 140px;
   margin: 50px; }
 
-div.nav1, div.nav2, div.span1, div.email-address {
-  margin-top: 50px; }
-
 .footer div.module.mod_menu {
   width: 170px; }
 
 div.span1.facebook, div.span1.twitter {
   width: 64px;
   height: 64px; }
-
-div.span1.facebook {
-  background-image: url(../images/facebook-white.png);
-  background-repeat: no-repeat; }
-
-div.span1.twitter {
-  background-image: url(../images/twitter-white.png);
-  background-repeat: no-repeat; }
