@@ -18,5 +18,5 @@
     <? //@todo make configurable link to the ipetition ?>
     <i class="icon-quote-right icon-4x pull-right"></i>
     <a href="<?= escape(object('application')->getCfg('petition_link')) ?>" class="petition" target="_blank"><?= translate('Add your voice to our petition') ?><br/>
-    <?= translate('total signatures: '). $total_signatures; ?></a>
+    <?//= translate('total signatures: '). $total_signatures; ?></a>
 </div>

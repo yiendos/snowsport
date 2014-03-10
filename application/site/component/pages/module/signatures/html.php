@@ -32,17 +32,19 @@ class PagesModuleSignaturesHtml extends PagesModuleDefaultHtml
 
         $this->show_title = true;
 
-        $total = $this->getSignatureTotal();
+        //$total = $this->getSignatureTotal();
 
-        $this->total_signatures = $total;
+        //$this->total_signatures = $total;
 
         return parent::render();
     }
 
     public function getSignatureTotal()
     {
+        $link = $this->getObject('application')->getCfg('petition_link');
+
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->getObject('application')->getCfg('petition_link'));
+        curl_setopt($ch, CURLOPT_URL, $link);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $page = curl_exec($ch);
