@@ -7,7 +7,19 @@
  * @link		git://git.assembla.com/nooku-framework.git for the canonical source repository
  */
 ?>
-
+<style>
+    //@todo put into relevant admin css, however missing compass stuff
+    input#search{
+    font-size: 14px;
+    padding: 4px 8px;
+    margin-bottom: 0;
+    border-radius: 4px;
+    height: 16px;
+    line-height: 16px;
+    max-width: 500px;
+    width: 500px;
+    }
+</style>
 <div class="scopebar">
 	<div class="scopebar__group">
 		<a class="<?= is_null($state->published) && is_null($state->access) && is_null($state->trashed) ? 'active' : ''; ?>" href="<?= route('published=&access=&trashed=' ) ?>">
