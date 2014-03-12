@@ -4,4 +4,5 @@ vendor/
 Vagrantfile
 .idea
 sites/default/config/config.php
-
+.htpasswd
+composer.phar
