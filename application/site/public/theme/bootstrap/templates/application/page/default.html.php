@@ -71,7 +71,7 @@
     <div class="footer hidden-phone">
         <div class="span2">
             <a href="http://timble.net" target="_blank">
-                <?= translate('Site powered by: ') ?>
+                <?= translate('Built for the web by: ') ?>
                 <img src="/theme/bootstrap/images/logo.png" />
             </a>
         </div>
