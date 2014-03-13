@@ -28,6 +28,7 @@
             <div class="hidden-desktop hidden-tablet">
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                     <span class="icon-th-list"></span></a>
+
                 <div class="nav-collapse collapse">
                     <ktml:modules position="left" chrome="wrapped">
                 </div>
@@ -50,12 +51,12 @@
             <div class="span3 hidden-phone">
                 <ktml:modules position="user3">
                 <?//@todo make into module ?>
-                <div style="display:block; clear:both; text-align: left; background: #000 url('http://cdn.ipetitions.com/rev/2716/assets/images/widgets/blue.png') no-repeat top left; width: 100%">
+                <!--<div style="display:block; clear:both; text-align: left; background: #000 url('http://cdn.ipetitions.com/rev/2716/assets/images/widgets/blue.png') no-repeat top left; width: 100%">
                     <iframe src="//www.ipetitions.com/widget/view/blue/635586" scrolling="no" marginheight="0" marginwidth="0" style="width: 200px; height:145px; border:0;"></iframe>
                     <div style="text-align:left; font-family:Arial;font-size: 10px; width: 100%; margin-top: -5px; padding: 5px 5px 4px 15px; color: #1697c7;">
                         <a style="color: #fff; text-decoration:none;" href="http://www.ipetitions.com/" target="_blank">Petition by iPetitions</a>
                     </div>
-                </div>
+                </div>-->
             </div>
         </aside>
         <div class="span9">
@@ -76,19 +77,19 @@
         </div>
         <div class="span3 facebook">
             <a href="https://www.facebook.com/snowsportforsheffield" target="_blank">
-                <img src="theme/bootstrap/images/facebook-white.png" />
+                <img src="/theme/bootstrap/images/facebook-white.png" />
                 Follow us on facebook
             </a>
         </div>
         <div class="span3 twitter">
             <a href="https://twitter.com/Snowsportsheff" target="_blank">
-                <img src="theme/bootstrap/images/twitter-white.png" />
+                <img src="/theme/bootstrap/images/twitter-white.png" />
                 Tweet with us
             </a>
         </div>
         <div class="span3 gmail">
             <a href="mailto:snowsportforsheffield@gmail.com">
-                <img src="theme/bootstrap/images/gmail.png"/>
+                <img src="/theme/bootstrap/images/gmail.png"/>
                 Email us
             </a>
         </div>
