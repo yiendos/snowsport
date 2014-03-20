@@ -8,42 +8,34 @@
 */
 ?>
 
-<ktml:module position="left">
-    <?= import('com:categories.view.categories.list.html') ?>
-</ktml:module>
-
 <title content="replace"><?= escape(translate($params->get('page_title'))); ?></title>
 
 <h1 class="article__header"><?= escape(translate($params->get('page_title'))); ?></h1>
 
-<? if(!$state->category) : ?>
-    <?= import('default_search.html') ?>
-<? endif ?>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <td><?= translate('Name') ?></td>
+            <td><?= translate('Comments') ?></td>
+        </tr>
+    </thead>
+    <? foreach($signatures as $signature) : ?>
+    <tr>
+        <td><?= $signature->name ?></td>
+        <td><i class="icon-quote-left"></i>
+                <?= $signature->comment ?>
+            <i class="icon-quote-right"></i>
+        </td>
+    </tr>
+    <? endforeach ?>
+    <tfoot>
+        <tr>
+            <td colspan="2">
+                <?= helper('com:application.paginator.pagination', array('total' => $total, 'show_count' => false, 'show_limit' => false)) ?>
+            </td>
+        </tr>
+    </tfoot>
+</table>
 
-<? if($state->category OR $state->searchword) : ?>
-<ul class="nav nav--pills nav--visited">
-<? foreach ($signatures as $signature) : ?>
-    <li>
-        <a href="<?= helper('route.signature', array('row' => $signature)) ?>">
-            <?= $signature->title ?>
-        </a>
-    </li>
-<? endforeach; ?>
-</ul>
-<? else : ?>
-   <ul class="nav nav--pills column--double">
-        <? foreach ($categories as $category): ?>
-            <li>
-                <a href="<?= helper('route.category', array('row' => $category)) ?>">
-                    <?= $category->title ?>
-                </a>
-            </li>
-        <? endforeach ?>
-    </ul>
-<? endif ?>
 
-<? if($state->category OR $state->searchword) : ?>
-<?= helper('com:application.paginator.pagination', array('total' => $total, 'show_count' => false, 'show_limit' => false)) ?>
-<? endif ?>
 
-<?= import('default_contact.html') ?>

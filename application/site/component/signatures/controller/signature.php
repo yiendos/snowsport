@@ -9,7 +9,7 @@
 
 use Nooku\Library;
 
-class SignaturesControllerQuestion extends Library\ControllerModel
+class SignaturesControllerSignature extends Library\ControllerModel
 {
     public function getRequest()
     {
@@ -17,6 +17,10 @@ class SignaturesControllerQuestion extends Library\ControllerModel
 
         // Only return published items.
         $request->query->published = 1;
+
+        $request->query->empty = 1;
+
+        $request->query->limit = 30;
         
         return $request;
     }

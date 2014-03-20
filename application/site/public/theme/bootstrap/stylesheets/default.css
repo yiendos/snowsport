@@ -6165,7 +6165,7 @@ body.login {
   margin-top: 10px;
   font-weight: bold; }
 
-.sidebar [class^="icon-"] {
+[class^="icon-"] {
   color: #228AC6; }
 
 a.petition {

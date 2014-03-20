@@ -32,7 +32,7 @@ class ModelSignatures extends Library\ModelTable
 		$state = $this->getState();
 
 		if ($state->search) {
-			$query->where('tbl.comment LIKE :search')->bind(array('search' => '%'.$state->search.'%'));
+			$query->where('tbl.comment LIKE :search OR tbl.name LIKE :search')->bind(array('search' => '%'.$state->search.'%'));
 		}
 
         if ($state->searchword) {
