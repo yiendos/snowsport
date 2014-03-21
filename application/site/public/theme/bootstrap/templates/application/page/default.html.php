@@ -11,7 +11,7 @@
 <!DOCTYPE HTML>
 <html lang="<?= $language; ?>" dir="<?= $direction; ?>">
 <?= import('page_head.html') ?>
-
+<meta name="google-site-verification" content="MieCIlzxp9_iVf5kp0hO8Zk-TQTP6D7yhGyYNz9zKfk" />
 <body>
 <header class="container">
     <div class="navbar">
